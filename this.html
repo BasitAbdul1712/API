@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <h1>This is not confused anyone</h1>
+    <script>
+        const myObj = {
+            name : 'kuddus Ali',
+            getFullName: function () {
+                console.log(this);
+                return 'Mr. ' + this.name;
+
+            }
+        }
+        const anotherObj = {
+            name : 'Buddus Ali',
+        }
+        // anotherObj.getFullName = myObj.getFullName; //myobj er getfullname ta ke use korche anotherojc er hisabe
+
+        // console.log(anotherObj.getFullName);
+        // anotherObj.getFullName(); //dor er left side determine korbe kake call korbe
+        // myObj.getFullName();
+
+        function add(a , b) {
+            console.log(this); // here this will get window becouse the is nothing in the left side.
+            return a + b;
+        }
+        add ( 12 + 13);
+
+        anotherObj.sum =  add;
+        anotherObj.sum(); //here anotherObject is in the left side so it will get the value from anotherObj
+
+
+
+
+    </script>
+</body>
+</html>
