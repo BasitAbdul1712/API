@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h2>IS object Notation</h2>
+    <script>
+        const user = { id: 245, 
+        name: "masum",
+        lover: {
+            name: "jamila",
+            age: "15"
+        },
+        friends: ["kamal", "jamal","calam"],
+        friendsAge: [15,16,17]}; //JS object
+        const userJSON = JSON.stringify(user); //JS object ke JSON e convert korte amra stringyfy likhbo.
+        console.log(userJSON);
+        const userFromJSON = JSON.parse(userJSON) // JSON String ke JS parse e convert korte JOSN.parse e convert korbo
+        console.log(userFromJSON); 
+    </script>
+</body>
+</html>
